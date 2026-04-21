@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jokenpô</title>
+</head>
+<body>
+    <h1>Jokenpô</h1>
+    <div class="container">
+        <h2>Faça sua escolha:</h2>
+        <div class="buttons">
+            <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+            <button id="paper" onclick="playHuman('paper')">&#x1F590;</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#x270C;</button>
+        </div>
+        <div class="result-container-you">
+            <p>Você escolheu:</p>
+            <img id="your-img" src="./question-mark.png" alt="Sua escolha">
+        </div>
+        <div class="result-container">
+            <p>A máquina escolheu:</p>
+            <img id="machine-img" src="./question-mark.png" alt="Escolha da Máquina">
+            <p class="result"></p>
+        </div>
+        <p class="result-final"></p>
+        <p class="your-score">Sua pontuação <span id="human-score">0</span></p>
+        <p class="machine-total-score">Pontuação do robô <span id="machine-score">0</span></p>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>

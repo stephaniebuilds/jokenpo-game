@@ -1,0 +1,150 @@
+
+:root {
+    --primary: #974362;
+    --primary-container: #fe97b9;
+    --background: #fef8fa;
+    --surface: #f3ecef;
+    --surface-lowest: #ffffff;
+    --on-surface: #353135;
+    --on-surface-variant: #625e61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--on-surface);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    text-shadow: 0 0 10px rgba(151, 67, 98, 0.3), 
+                 0 0 20px rgba(151, 67, 98, 0.2);
+}
+
+.container {
+    background: var(--surface);
+    width: 100%;
+    max-width: 500px;
+    border-radius: 2rem;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(151, 67, 98, 0.08);
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: #974362;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.buttons button {
+    background: var(--surface-lowest);
+    border: none;
+    padding: 20px;
+    border-radius: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+}
+
+.buttons button:hover {
+    transform: translateY(-5px);
+    background: white;
+    box-shadow: 0 12px 25px rgba(151, 67, 98, 0.15);
+}
+
+.result-container-you, 
+.result-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+}
+
+.result-container-you p, 
+.result-container p {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+#your-img, #machine-img, .result-container span {
+    font-size: 4rem;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-align: center;
+}
+
+p.result {
+    color: var(--on-surface-variant) !important;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.your-score, 
+.machine-total-score {
+    margin-top: 10px;
+    font-weight: 700;
+    color: var(--on-surface-variant);
+}
+
+.your-score span, 
+.machine-total-score span {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-left: 10px;
+}
+
+#your-img, 
+#machine-img {
+    width: 80px; 
+    height: 80px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+.result-container-you span, 
+.result-container span {
+    font-size: 4rem;
+    display: block;
+    margin: 10px 0;
+}
